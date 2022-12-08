@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 17px;">
+    <head>
+        <meta charset="UTF-8">
+        <title> Mito-AssemblyVis: GGisy </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/main.css">
+    </head>
+
+    <body onload="{{ onload }}">
+        <div id="option_title_div">
+            <h1 id="option_title">
+                GGisy-Based Circos Plot
+            </h1>
+        </div>
+
+        <div id="option_div">
+            <img id="option_image" src="/static/GGisyLogo.png">
+            <a id="back_button" href="index.html"> Back to Main Page </a>
+
+            <form id="option_form" method="POST" action="" dir="ltr" enctype="multipart/form-data">
+
+                <!-- Upload File -->
+                <div class="upload">
+                    <input type="button" class="uploadButton" value="Browse" />
+                    <input type="file" name="ggisy_r" id="ggisy_r" accept=".fasta,.fas,.fa" onchange="document.getElementById('ggisy_r_fileName').textContent=document.getElementById('ggisy_r').files[0].name;" />
+                    <span id="ggisy_r_fileName">Reference Genome (fasta)</span>
+                </div>
+
+                <br />
+                <br />
+
+                <!-- Upload File -->
+                <div class="upload">
+                    <input type="button" class="uploadButton" value="Browse" />
+                    <input type="file" name="ggisy_q" id="ggisy_q" accept=".fasta,.fas,.fa" onchange="document.getElementById('ggisy_q_fileName').textContent=document.getElementById('ggisy_q').files[0].name;" />
+                    <span id="ggisy_q_fileName">Query Genome (fasta)</span>
+                </div>
+
+                <br />
+                <br />
+
+                <!-- Parameter -->
+                <div class="param_div">
+                    <span class="parameter_title">
+                        Alignment Cutoff
+                        <span class="tooltiptext">Alignment length cutoff to post-processing.</span>
+                    </span>
+                    <input type="text" name="ggisy_l" id="ggisy_l" class="param" value="1000" />
+                </div>
+
+                <!--<br />-->
+                <br />
+
+                <!-- Parameter -->
+                <div class="param_div">
+                    <span class="parameter_title">
+                        Identity Cutoff
+                        <span class="tooltiptext">Identity cutoff for the alignment.</span>
+                    </span>
+                    <input type="text" name="ggisy_i" id="ggisy_i" class="param" value="50" />
+                </div>
+
+                <!--<br />-->
+                <br />
+
+                <!-- Parameter -->
+                <div class="param_div">
+                    <span class="parameter_title">
+                        Coverage Cutoff
+                        <span class="tooltiptext">Coverage cutoff for query sequences.</span>
+                    </span>
+                    <input type="text" name="ggisy_c" id="ggisy_c" class="param" value="50" />
+                </div>
+
+                <!--<br />-->
+                <br />
+
+                <!-- Parameter -->
+                <div class="param_div">
+                    <span class="parameter_title">
+                        Threads
+                        <span class="tooltiptext">Threads used for blastn.</span>
+                    </span>
+                    <input type="text" name="ggisy_t" id="ggisy_t" class="param" value="4" />
+                </div>
+
+                <!--<br />-->
+                <br />
+
+                <!-- Parameter -->
+                <div class="param_div">
+                    <span class="parameter_title">
+                        Intermediate Files
+                        <span class="tooltiptext">Keep the generated intermediate files.</span>
+                    </span>
+                    <input type="checkbox" name="ggisy_k" id="ggisy_k" class="param" />
+                </div>
+
+                <br />
+                <br />
+
+                <button type=submit class='uploadButton' name='action' value=Upload>Submit</button>
+            </form>
+        </div>
+    </body>
+</html>

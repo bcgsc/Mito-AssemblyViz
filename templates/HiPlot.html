@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 17px;">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mito-AssemblyVis: HiPlot</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/main.css">
+    </head>
+
+    <body onload="{{ onload }}">
+        <div id="option_title_div">
+            <h1 id="option_title">
+                HiPlots for Hyperparameter Tuning
+            </h1>
+        </div>
+
+        <div id="option_div">
+            <img id="option_image" src="/static/HiPlotLogo.svg">
+            <a id="back_button" href="index.html"> Back to Main Page </a>
+
+            <form id="option_form" method="POST" action="" dir="ltr" enctype="multipart/form-data">
+                Upload the hyperparameters information file: <br />
+                (Each row corresponding to one assembly pipeline) <br />
+                <br />
+                <!-- Upload File -->
+                <div class="upload">
+                    <input type="button" class="uploadButton" value="Browse" />
+                    <input type="file" name="hiplot_csv" id="hiplot_csv" accept=".csv" onchange="document.getElementById('hiplot_csv_fileName').textContent=document.getElementById('hiplot_csv').files[0].name;" />
+                    <span id="hiplot_csv_fileName"> Input CSV </span>
+                </div>
+
+                <br />
+                <br />
+
+                <button type="submit" class='uploadButton' name='action' value="Submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>

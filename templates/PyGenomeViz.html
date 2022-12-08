@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 17px;">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mito-AssemblyVis: PyGenomeViz</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/main.css">
+    
+        <script>
+            var options_count = 0;
+            var options = [];
+            var option_clone = null;
+
+            function generate_options() {
+                new_count = parseInt(document.getElementById('option_count').value);
+                if (new_count < 1 || new_count > 5) {
+                    alert("You can include a maximum of 5 pipelines.");
+                    return;
+                }
+
+                if (option_clone == null)
+                    option_clone = document.getElementsByClassName('option_params_div')[0];
+
+                var container = document.getElementById('options_container');
+
+                if (new_count > options_count) {
+                    for (var i = options_count; i < new_count; i++) {
+                        var new_element = option_clone.cloneNode(true);
+
+                        var id = "pipeline" + i;
+                        new_element.id = id;
+                        new_element.hidden = false;
+
+                        container.append(new_element);
+                        options.push(new_element);
+
+                        document.querySelector('#' + id + ' #title').name = "title_" + i;
+                        document.querySelector('#' + id + ' #annotation_file').name = "annotation_file_" + i;
+                        document.querySelector('#' + id + ' #coverage_file').name = "coverage_file_" + i;
+                        document.querySelector('#' + id + ' #genome_size').name = "genome_size_" + i;
+                        document.querySelector('#' + id + ' h3').innerHTML += " " + (i + 1);
+                        document.querySelector('#' + id + ' #title').value = "pipeline" + (i + 1);
+
+                        {
+                            var annoFile = document.querySelector('#' + id + ' #annotation_file');
+                            var annoFileName = document.querySelector('#' + id + ' #temp_anno');
+
+                            annoFile.id = "anno_file_" + i;
+                            annoFileName.id = "anno_file_name_" + i;
+
+                            annoFile.onchange = function () {
+                                document.getElementById(annoFileName.id).textContent = document.getElementById(annoFile.id).files[0].name;
+                            };
+                        }
+
+                        {
+                            var covFile = document.querySelector('#' + id + ' #coverage_file');
+                            var covFileName = document.querySelector('#' + id + ' #temp_cov');
+
+                            covFile.id = "cov_file_" + i;
+                            covFileName.id = "cov_file_name_" + i;
+
+                            covFile.onchange = function () {
+                                document.getElementById(covFileName.id).textContent = document.getElementById(covFile.id).files[0].name;
+                            };
+                        }
+                    }
+                } else {
+                    for (var i = options_count - 1; i >= new_count; i--)
+                        options[i].remove();
+
+                    options.splice(new_count, options_count - new_count);
+                }
+
+                options_count = new_count;
+            }
+
+            function enter_on_options(event) {
+                if (event.key == 'Enter') {
+                    document.getElementById('genome_size').focus();
+                    return false;
+                }
+
+                return true;
+            }
+        </script>
+    
+    </head>
+
+    <body onload="generate_options(); {{ onload }}">
+        <div id="option_title_div">
+            <h1 id="option_title">
+                PyGenomeViz Annotation Visualization
+            </h1>
+        </div>
+
+        <div id="option_div">
+            <img id="option_image_pygenome" src="/static/PyGenomeVizLogo.png">
+            <a id="back_button" href="index.html"> Back to Main Page </a>
+
+            <form id="option_form" method="POST" action="" dir="ltr" enctype="multipart/form-data">
+
+                Enter the number of annotations:
+                <input type="text" name="options" id="option_count" value="1" onmouseout="generate_options()" onchange="generate_options()" onkeydown="return enter_on_options(event);" />
+
+                <br />
+
+                <div class="reference_div">
+                    <h3 id="option_header" style="margin-top: 0;"> Reference </h3>
+
+                    <!-- Upload File -->
+                    <div class="upload">
+                        <input type="button" class="uploadButton" value="Browse" />
+                        <input type="file" name="reference_annotation_file" id="anno_file" accept=".fasta,.fas,.fa" onchange="document.getElementById('ref_anno').textContent=document.getElementById('anno_file').files[0].name;" />
+                        <span id="ref_anno"> Annotation File (fasta) </span>
+                    </div>
+
+                    <br />
+                    <br />
+
+                    <div id="option_param_div">
+                        Genome Size
+                        <input type="text" value="0" name="reference_genome_size" id="genome_size" />
+                    </div>
+                </div>
+
+                <!-- Empty Option Container -->
+                <div id="options_container"></div>
+
+                <!-- Option -->
+                <div class="option_params_div" hidden>
+                    <h3 id="option_header" style="margin-top: 0;"> Pipeline </h3>
+
+                    <div id="option_param_div">
+                        Title
+                        <input type="text" value="Pipeline" id="title" />
+                    </div>
+
+                    <br />
+                    <br />
+
+                    <!-- Upload File -->
+                    <div class="upload">
+                        <input type="button" class="uploadButton" value="Browse" />
+                        <input type="file" id="annotation_file" accept=".fasta,.fas,.fa" />
+                        <span id="temp_anno"> Annotation File (fasta) </span>
+                    </div>
+
+                    <br />
+                    <br />
+
+                    <!-- Upload File -->
+                    <div class="upload">
+                        <input type="button" class="uploadButton" value="Browse" />
+                        <input type="file" id="coverage_file" accept=".txt" />
+                        <span id="temp_cov"> Coverage File (txt) </span>
+                    </div>
+
+                    <br />
+                    <br />
+
+                    <div id="option_param_div">
+                        Genome Size
+                        <input type="text" value="0" id="genome_size" />
+                    </div>
+                </div>
+
+                <br />
+                <br />
+
+                <button type="submit" class='uploadButton' name='action' value="Submit"> Submit </button>
+            </form>
+        </div>
+    </body>
+</html>

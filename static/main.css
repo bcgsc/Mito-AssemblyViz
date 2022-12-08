@@ -1,0 +1,218 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.main_option_ggisy_image {
+    width: 75%;
+}
+
+.main_option_images {
+    /*border: 1px solid rgb( 115, 227, 255 );*/
+    /*border-radius: 30px;*/
+    width: 100%;
+    /*width: 50%;*/
+    /*height: auto;*/
+    /*object-fit: cover;*/
+}
+
+.main_option_divs {
+    max-width: 20%;
+    display: inline-block;
+}
+
+#main_options_div {
+    margin-top: 5vh;
+    width: 100%;
+    height: 65vh;
+    text-align: center;
+}
+
+#main_title_div {
+    width: 100%;
+    height: 30vh;
+    text-align: center;
+    background-color: rgb( 115, 227, 255 )
+}
+
+#option_title_div {
+    width: 100%;
+    height: 15vh;
+    text-align: center;
+    background-color: rgb( 115, 227, 255 )
+}
+
+#main_title {
+    margin: 0;
+    padding: 5vw;
+}
+
+#option_title {
+    margin: 0;
+    padding: 2.5vw;
+}
+
+#option_title_hiplot {
+    margin: 0;
+    padding: 1vw;
+}
+
+#option_div
+{
+    display: inline-block;
+    width: 100%;
+    /*background-color: rgb( 255, 227, 255 )*/
+}
+
+#option_image {
+    width: 30%;
+    margin: 5%;
+    height: auto;
+    float: right;
+}
+
+#option_image_pygenome {
+    width: 40%;
+    margin: 5%;
+    height: auto;
+    float: right;
+}
+
+#back_button {
+    margin: 3vh;
+    float: left;
+}
+
+#option_form {
+    margin: 10vh;
+    float: left;
+}
+
+div.upload {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: inline-block;
+    height: 30px;
+    padding: 3px 40px 3px 3px;
+    position: relative;
+    width: auto;
+}
+
+div.upload:hover {
+    opacity: 0.95;
+}
+
+div.upload input[type="file"] {
+    display: input-block;
+    width: 100%;
+    height: 30px;
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+}
+
+.uploadButton {
+    background-color: #425F9C;
+    border: none;
+    border-radius: 3px;
+    color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    margin-right: 15px;
+    width: auto;
+    padding: 0 20px;
+    box-sizing: content-box;
+}
+
+.upload span {
+    font-family: Arial;
+    font-size: 14px;
+}
+
+.upload + .uploadButton {
+    height: 38px;
+}
+
+.parameter_title {
+    font-family: Arial;
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.parameter_title .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(64, 64, 64, 128);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+}
+
+.parameter_title:hover .tooltiptext {
+    visibility: visible;
+}
+
+.param {
+    float: right;
+    width: 30%;
+}
+
+#option_param_div {
+    display: inline-block;
+}
+
+.option_params_div {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.reference_div {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+#option_count {
+    width: 2em;
+    text-align: center;
+}
+
+table {
+    border: none;
+}
+
+td {
+    text-align: center;
+    padding: 1%;
+}
+
+.top_td {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#main_options_table {
+    table-layout: fixed;
+    width: 60%;
+    margin: auto;
+    margin-top: 2.5vh;
+}
+
+.main_option_title {
+    font-family: Arial;
+    font-size: 1.5em;
+}
