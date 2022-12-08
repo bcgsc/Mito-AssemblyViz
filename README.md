@@ -52,13 +52,7 @@ Similar to HiPlot, we have written a Python script (`PyGenomeViz.py`) to use the
 
 1) Using the provided `environment.yml` file:
 
-**Linux, macOS:**
-```
-conda env create -f environment.yml  
-conda activate Mito
-```
-**Windows:**
-```
+‍‍```
 conda env create -f environment.yml 
 conda activate Mito
 ```
@@ -83,7 +77,7 @@ To run the app (in development mode), simply run:
 python Flask.py
 ```
 
-The app will be listening on port 31807, and you can be navigated to the first page:
+The app will be listening on port 31807 of the *local host*, and you can be navigated to the first page:
 
 <img src="pages/index.png" width="850" height="500">
 
