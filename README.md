@@ -54,12 +54,11 @@ Similar to HiPlot, we have written a Python script (`PyGenomeViz.py`) to use the
 
 **Linux, macOS:**
 `
-conda env create -f environment.yml 
-
+conda env create -f environment.yml  <br />
 conda activate Mito
 `
 **Windows:**
-`conda env create -f environment.yml \
+`conda env create -f environment.yml 
 conda activate Mito
 `
 2) Manual
