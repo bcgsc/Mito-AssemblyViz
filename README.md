@@ -19,6 +19,8 @@ The main components are:
 
 * PyGenomeViz [3]:  
 
+### The Web Application Modules:
+
 `data/`: Prepared Data corresponding to Sea Otter for comparing the three example mitogenome assembly pipelines: mtGasp (the novel in-house pipeline), MitoZ [4], and GetOrganelle [5]. 
 
 `templates/`: The HTML files belonging to the web application
