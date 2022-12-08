@@ -63,6 +63,7 @@ conda env create -f environment.yml
 conda activate Mito
 ```
 2) Manual
+
 You can also create an environment and manually install the packages.
 
 ```
