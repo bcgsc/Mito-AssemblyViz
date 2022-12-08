@@ -43,6 +43,7 @@ Similar to HiPlot, we have written a Python script (`PyGenomeViz.py`) to use the
 - pygenomeviz
 - hiplot
 - BLAST+ (Only needed for GGisy)
+- biopython (Only needed for GGisy)
 - R with the following libraries: (Only needed for GGisy)
    - omiccircos (pre: libcurl-openssl-dev)
    - RColorBrewer
