@@ -43,7 +43,7 @@ Similar to HiPlot, we have written a Python script (`PyGenomeViz.py`) to use the
 - pygenomeviz
 - hiplot
 - BLAST+ (Only needed for GGisy)
-- R with the following libraries:
+- R with the following libraries: (Only needed for GGisy)
    - omiccircos (pre: libcurl-openssl-dev)
    - RColorBrewer
    - varhandle
@@ -71,10 +71,12 @@ conda create -n Mito python=3.9
 conda activate Mito 
 conda install pandas 
 conda install -c anaconda flask 
+conda install -c conda-forge r-base
 conda install -c conda-forge poppler 
 conda install -c conda-forge pdf2image 
 conda install -c conda-forge -c bioconda pygenomeviz 
 conda install -c conda-forge hiplot
+
 ```
 To run the app (in development mode), simply run:
 
