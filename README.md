@@ -52,7 +52,7 @@ Similar to HiPlot, we have written a Python script (`PyGenomeViz.py`) to use the
 
 1) Using the provided `environment.yml` file:
 
-‍‍```
+```
 conda env create -f environment.yml 
 conda activate Mito
 ```
@@ -72,6 +72,7 @@ conda install -c conda-forge pdf2image
 conda install -c conda-forge -c bioconda pygenomeviz 
 conda install -c conda-forge hiplot
 ```
+
 To run the app (in development mode), simply run:
 
 ```
