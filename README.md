@@ -84,7 +84,10 @@ To run the app (in development mode), simply run:
 python Flask.py
 ```
 
-The app will be listening on port 31807.
+The app will be listening on port 31807, and you can be navigated to the first page:
+
+<img src="pages/index.png" width="500" height="400">
+
 
 
 ## References
