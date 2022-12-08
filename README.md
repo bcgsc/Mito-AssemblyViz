@@ -16,13 +16,13 @@ The main components are:
 
 * HiPlot [2]: Given a set of hyper-parameters used by different assembly pipelines, the HiPlot tool is used to illustrate the relationships between these parameters, such as the k-mer sizes, and the final assembly results, such as the genome completeness. We have written a Python script to use the original HiPlot library for this specific application.
 
-* PyGenomeViz [3]: We have used the PyGenomeViz library to create an annotation visualization tool using Python. It gets the following inputs:
+* PyGenomeViz [3]: We have used the PyGenomeViz library to create an annotation visualization tool using Python. It gets the following inputs, and compares the assembly pipelines with each other and with the reference genome, by showing this information in a linear setup.
+Similar to HiPlot, we have written a Python script to use the features of the original PyGenomeViz library and fit it to our specific needs.
 
   * Genome annotation information (gene names, strand they are located on, and specific position), resulted from different assembly pipelies 
   * Sequencing read coverages
   * Genome Size 
-And compares the pipelines with each other and with the reference genome, by showing this information in a linear setup.
-Similar to HiPlot, we have written a Python program to use the features of the original PyGenomeViz library and fit it to our specific needs.
+
 
 ### The Web Application Modules:
 
