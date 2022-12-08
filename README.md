@@ -9,6 +9,8 @@ Our project is implemented as an interactive web application using the Flask fra
 
 The main components are:
 
+### The Visualization Modules:
+
 * GGisy [1]: A Circos-based genome assembly consistency plot which is given a set of contigs relative to a reference genome and results in a quick qualitative view of the misassemblies in a genome assembly.
 
 
