@@ -7,6 +7,15 @@ By: Armaghan Sarvar, Cecilia Yang
 
 Our project is implemented as an interactive web application using the Flask framework written in Python.
 
+The main components are:
+
+* GGisy
+
+
+* HiPlot
+
+
+* PyGenomeViz
 
 `data/`: Prepared Data
 
