@@ -28,7 +28,7 @@ The main components are:
 `static/`: The application .css file and used logos
 
 
-### References
+## References
 [1] Sandro Valenzuela. GGisy. https://github.com/Sanrrone/GGisy. 2017.
 
 [2] Facebook Research. HiPlot: High-dimensional interactive plots made easy. https://ai.facebook.com/blog/ hiplot-high-dimensional-interactive-plots-made-easy/.  Accessed:  2022-10-18.
