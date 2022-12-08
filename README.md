@@ -54,16 +54,17 @@ Similar to HiPlot, we have written a Python script (`PyGenomeViz.py`) to use the
 
 **Linux, macOS:**
 `
-conda env create -f environment.yml
+conda env create -f environment.yml \
 conda activate Mito
 `
 **Windows:**
-conda env create -f environment.yml 
+`conda env create -f environment.yml \
 conda activate Mito
-
+`
 2) Manual
 You can also create an environment and manually install the packages.
 
+`
 conda create -n Mito python=3.9 
 conda activate Mito 
 conda install pandas 
@@ -72,7 +73,7 @@ conda install -c conda-forge poppler
 conda install -c conda-forge pdf2image 
 conda install -c conda-forge -c bioconda pygenomeviz 
 conda install -c conda-forge hiplot
-
+`
 To run the app (in development mode), simply run:
 
 ```
