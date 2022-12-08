@@ -85,7 +85,7 @@ python Flask.py
 
 The app will be listening on port 31807, and you can be navigated to the first page:
 
-<img src="pages/index.png" width="800" height="400">
+<img src="pages/index.png" width="800" height="500">
 
 
 
