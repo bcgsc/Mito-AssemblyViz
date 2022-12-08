@@ -26,7 +26,7 @@ Similar to HiPlot, we have written a Python script (`PyGenomeViz.py`) to use the
 
 ### The Web Application Modules:
 
-`data/`: Prepared data corresponding to Sea Otter species for comparing the three example mitogenome assembly pipelines: mtGasp (the novel in-house pipeline), MitoZ [4], and GetOrganelle [5]. 
+`data/`: Prepared data corresponding to the Sea Otter species for comparing the three example mitogenome assembly pipelines: mtGasp (the novel in-house pipeline), MitoZ [4], and GetOrganelle [5], using each of the above visualization modules.
 
 `templates/`: The HTML files belonging to the web application
 
