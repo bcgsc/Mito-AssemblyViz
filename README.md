@@ -14,10 +14,10 @@ The main components are:
 * GGisy [1]: A Circos-based genome assembly consistency plot which is given a set of contigs relative to a reference genome and results in a quick qualitative view of the misassemblies in a genome assembly. We have modified the original GGisy library to fit it into our goal.
 
 
-* HiPlot [2]: Given a set of hyper-parameters used by different assembly pipelines, the HiPlot tool is used to illustrate the relationships between these parameters, such as the k-mer sizes, and the final assembly results, such as the genome completeness. We have written a Python script to use the original HiPlot library for this specific application.
+* HiPlot [2]: Given a set of hyper-parameters used by different assembly pipelines in a csv format, the HiPlot tool is used to illustrate the relationships between these parameters, such as the k-mer sizes, and the final assembly results, like the genome completeness. We have written a Python script (`HiPlot.py`) to use the original HiPlot library for this specific application. 
 
-* PyGenomeViz [3]: We have used the PyGenomeViz library to create an annotation visualization tool using Python. It gets the following inputs, and compares the assembly pipelines with each other and with the reference genome, by showing this information in a linear setup.
-Similar to HiPlot, we have written a Python script to use the features of the original PyGenomeViz library and fit it to our specific needs.
+* PyGenomeViz [3]: We have used the PyGenomeViz library to create an annotation visualization tool using Python. It gets the following inputs, and compares the assembly pipelines with each other and with the reference genome, by showing all of this information in a linear setup.
+Similar to HiPlot, we have written a Python script (`PyGenomeViz.py`) to use the features of the original PyGenomeViz package and fit it to our specific needs.
 
   * Genome annotation information (gene names, strand they are located on, and specific position), resulted from different assembly pipelies 
   * Sequencing read coverages
