@@ -19,8 +19,8 @@ The main components are:
 * PyGenomeViz [3]: We have used the PyGenomeViz library to create an annotation visualization tool using Python. It gets the following inputs, and compares the assembly pipelines with each other and with the reference genome, by showing all of this information in a linear setup.
 Similar to HiPlot, we have written a Python script (`PyGenomeViz.py`) to use the features of the original PyGenomeViz package and fit it to our specific needs.
 
-  * Genome annotation information (gene names, strand they are located on, and specific position), resulted from different assembly pipelies (.fas format)
-  * Sequencing read coverages (.txt format)
+  * Genome annotation information (gene names, strand they are located on, and specific position), resulted from different assembly pipelies (fas format)
+  * Sequencing read coverages (txt format)
   * Genome Size 
 
 
