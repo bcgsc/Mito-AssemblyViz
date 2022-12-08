@@ -27,6 +27,16 @@ The main components are:
 
 `static/`: The application .css file and used logos
 
+## Setup
+
+To run the app (in development mode), simply run:
+
+```
+python Flask.py
+```
+
+The app will be listening on port 31807.
+
 
 ## References
 [1] Sandro Valenzuela. GGisy. https://github.com/Sanrrone/GGisy. 2017.
