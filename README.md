@@ -76,7 +76,6 @@ conda install -c conda-forge poppler
 conda install -c conda-forge pdf2image 
 conda install -c conda-forge -c bioconda pygenomeviz 
 conda install -c conda-forge hiplot
-
 ```
 To run the app (in development mode), simply run:
 
@@ -86,7 +85,7 @@ python Flask.py
 
 The app will be listening on port 31807, and you can be navigated to the first page:
 
-<img src="pages/index.png" width="500" height="400">
+<img src="pages/index.png" width="800" height="400">
 
 
 
