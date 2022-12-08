@@ -50,17 +50,18 @@ Similar to HiPlot, we have written a Python script (`PyGenomeViz.py`) to use the
 
 ### Preparing the Environment 
 
-* Using the provided `environment.yml` file:
+1) Using the provided `environment.yml` file:
 
 **Linux, macOS:**
+`
 conda env create -f environment.yml
 conda activate Mito
-
+`
 **Windows:**
 conda env create -f environment.yml 
 conda activate Mito
 
-* Manual
+2) Manual
 You can also create an environment and manually install the packages.
 
 conda create -n Mito python=3.9 
