@@ -10,6 +10,7 @@ matplotlib.use('agg')
 app = Flask(__name__)
 app.config['STATIC_FOLDER'] = 'static'
 app.config['TEMP_FOLDER'] = 'temp'
+app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 
 @app.route("/", methods=['GET', 'POST'])
