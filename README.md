@@ -72,6 +72,7 @@ conda install -c conda-forge poppler
 conda install -c conda-forge pdf2image 
 conda install -c conda-forge -c bioconda pygenomeviz 
 conda install -c conda-forge hiplot
+conda install -c conda-forge biopython
 ```
 
 To run the app (in development mode), simply run:
