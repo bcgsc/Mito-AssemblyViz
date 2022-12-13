@@ -32,6 +32,8 @@ Similar to HiPlot, we have written a Python script (`PyGenomeViz.py`) to use the
 
 `static/`: The application .css file and used logos
 
+`temp/`: Temporary location for storing the user-uploaded files
+
 ## Setup
 
 ### Dependencies:
